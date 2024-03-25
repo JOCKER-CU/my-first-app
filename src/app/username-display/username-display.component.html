@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="row">
+        <div class="col xs 12">
+            <label for="">Username</label>
+            <input type="text" class="form-control" [(ngModel)]="newUserName">
+            <p >Server was created, My Server name is {{ newUserName }}</p>
+            <button class="btn btn-primary" [disabled]="newUserName===''" (click)="newUserName = '' ">Reset User</button>
+
+        </div>
+    </div>
+</div>

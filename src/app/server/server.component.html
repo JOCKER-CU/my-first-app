@@ -1,0 +1,11 @@
+<!-- <p [ngStyle]="{backgroundColor : getColor()}">{{'Server'}} is {{ serverId }} and {{ getServerStatus() }}</p> -->
+
+<div class="container">
+
+    <button class="btn btn-primary" (click)="showDetail()">Detail Info</button>
+
+    <p *ngFor="let logItem of log; let i = index"
+    [ngStyle]="{backgroundColor: i >= 5 ? 'blue' : 'green'} "
+    [ngClass]="{'white-text': i >= 5}"
+    > {{logItem}}</p>
+</div>
